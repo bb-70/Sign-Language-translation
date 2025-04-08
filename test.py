@@ -90,6 +90,6 @@ if predictions:
     final_word = Counter(predictions).most_common(1)[0][0]
     print(f'\n🎯 최종 번역 결과: {final_word}')
 else:
-    print("\n❗ 예측된 결과가 없습니다.")
+    print("\n❗ 예측된 결과가 없습니다요.")
 
 
