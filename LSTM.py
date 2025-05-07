@@ -111,7 +111,7 @@ def main():
 
                 print(f"📊 Accuracy: {acc:.2f}, Precision: {prec:.2f}, Recall: {rec:.2f}, F1: {f1:.2f}")
 
-                model_name = f"sign_model_u{units}_l{layers}_d{int(dropout*100)}.h5"
+                model_name = f"LSTM_model_u{units}_l{layers}_d{int(dropout*100)}.h5"
                 model_path = os.path.join(MODEL_SAVE_DIR, model_name)
                 model.save(model_path)
                 print(f"✅ 모델 저장 완료: {model_path}")
@@ -131,7 +131,7 @@ def main():
                     best_name = model_name
 
     if best_model:
-        best_model.save(os.path.join(MODEL_SAVE_DIR, 'sign_model_best_f1.h5'))
+        best_model.save(os.path.join(MODEL_SAVE_DIR, 'LSTM_model_best_f1.h5'))
 
         # ✅ 베스트 모델 성능 출력
         print("\n🏆 [베스트 모델 성능 요약]")
@@ -140,7 +140,7 @@ def main():
         print(f"🎯 Precision     : {best_prec:.2f}")
         print(f"📈 Recall        : {best_rec:.2f}")
         print(f"⭐ F1 Score       : {best_f1:.2f}")
-        print(f"\n💾 저장 경로     : sign_model_best_f1.h5")
+        print(f"\n💾 저장 경로     : LSTM_model_best_f1.h5")
         print(f"📄 전체 결과 CSV : {CSV_LOG_PATH}")
 
 if __name__ == '__main__':
